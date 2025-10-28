@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+   font-family: "Roboto", sans-serif;
+  
+}
+
+body {
+    background-color: #000;
+    padding: 160px 0 80px 0; /* o primeiro valor aumenta o topo */
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #000;
+    border-bottom: rgba(255, 255, 255, 0.3);
+    padding: 20px 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* centraliza tudo */
+    gap: 50px;
+    /* espaço entre logo e menu */
+}
+
+.logo img {
+    height: 60px;
+    /* ajuste o tamanho da logo */
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    /* espaçamento entre os itens do menu */
+}
+
+.menu ul li a {
+    color: #fff;
+    /* cinza esverdeado para o texto */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    /* aumentei o tamanho da letra */
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #a0afa1;
+    /* dourado no hover */
+    font-size: 1.2rem;
+}
+
+.btn-agendar {
+    background-color: #5f161b;
+    color: #fff;
+    padding: 10px 20px;
+    /* botão maior para combinar com letras maiores */
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    /* aumentei o tamanho da letra */
+}
+
+.servicos {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.servicos h2 {
+    color: #fff;
+    /* vinho escuro */
+    font-size: 36px;
+    margin-bottom: 50px;
+    position: center;
+}
+
+.servicos h2 span{
+     font-family: "Dancing Script", cursive;
+    color: #D4AF37;
+    /* vinho escuro */
+    font-size: 36px;
+    margin-bottom: 50px;
+    position: center;
+    text-transform: uppercase;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: #000;
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px;
+    color: #a0afa1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); /* brilho suave padrão */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    height: 150px; /* altura fixa */
+    object-fit: cover; /* mantém proporção e corta o excesso */
+}
+
+.card h3 {
+    font-size: 18px;
+    color:#D4AF37;
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #D4AF37, 0 0 60px #D4AF37; /* LED dourado intenso */
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #111;
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #D4AF37;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.popup-content h3 {
+  color: #D4AF37;
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #D4AF37;
+}
+
+/* Seção da equipe */
+#equipe {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#equipe h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+#equipe h2 span {
+    color: #D4AF37;
+     font-family: "Dancing Script", cursive;
+     text-transform: uppercase;
+}
+
+/* Container dos cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Cards da equipe */
+#equipe .card {
+    background-color: #000;
+    color: #fff;
+    width: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Efeito de zoom ao passar o mouse */
+#equipe .card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagem do card */
+#equipe .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Informações do card */
+#equipe .card-info {
+    padding: 15px;
+}
+
+#equipe .card-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: "Dancing Script", cursive;
+}
+
+#equipe .card-info p {
+    margin: 5px 0 0;
+    
+}
+
+/* Popup */
+#popupEquipe {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popupEquipe .popup-content {
+    background-color: #000;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+#popupEquipe .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#popupEquipe a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #D4AF37;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+#popupEquipe a:hover {
+    color: #222420;
+}
+
+.sobre-nos { 
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.sobre-nos h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sobre-nos h2 span {
+  color: #D4AF37;
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+}
+
+/* Estrutura geral */
+.sobre-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  gap: 2rem;
+}
+
+/* Alterna automaticamente o lado dos blocos */
+.sobre-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Imagem — mantém tamanho original */
+.sobre-img {
+  flex: 0 0 auto; /* permite a imagem usar o tamanho dela */
+}
+
+.sobre-img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  object-fit: none; /* mostra a imagem inteira, sem corte */
+  display: block;
+}
+
+/* Texto */
+.sobre-texto {
+  flex: 1;
+  color: #fff;
+}
+
+.sobre-texto h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.sobre-texto h3 span {
+  color: #D4AF37;
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+}
+
+.sobre-texto p {
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .sobre-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .sobre-img {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .sobre-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sobre-texto {
+    width: 100%;
+  }
+}
+
+.faq {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq h2 span {
+  color: #D4AF37;
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+}
+
+/* Itens do FAQ */
+.faq-item {
+  border-bottom: 1px solid #D4AF37;
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  font-size: 1.6rem;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #D4AF37;
+}
+
+.faq-icon {
+  font-size: 1.6rem;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  color: #fff;
+  padding: 0 1rem 1rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+   text-align: left;
+}
+
+/* Quando ativo */
+.faq-item.active .faq-question {
+  color: #D4AF37;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.contato {
+  text-align: center;
+  padding: 5rem 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.contato h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contato h2 span {
+  color: #D4AF37;
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+}
+
+.contato p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: #ccc;
+}
+
+.contato-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.botao-contato {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #D4AF37;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0px #D4AF37; /* sombra inicial invisível */
+}
+
+.botao-contato:hover {
+  background-color: #D4AF37;
+  color: #000;
+  box-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 40px #D4AF37; /* efeito dourado tipo LED */
+}
+
+.endereco {
+  background-color: #000; /* fundo preto */
+  color: #fff; /* texto branco */
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.endereco h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.endereco h2 span {
+  color: #D4AF37; /* dourado */
+  font-family: "Dancing Script", cursive;
+  text-transform: uppercase;
+}
+
+.mapa-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapa-container iframe {
+  width: 70%; /* antes era 90% */
+  max-width: 600px; /* antes 800px */
+  height: 350px; /* antes 450px */
+  border: 2px solid #D4AF37;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #D4AF37;
+  transition: box-shadow 0.3s ease;
+}
+
+.mapa-container iframe:hover {
+  box-shadow: 0 0 30px #D4AF37, 0 0 60px #D4AF37;
+}

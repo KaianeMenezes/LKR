@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./img/LKR 48x48.png" type="image/x-icon">
+    <title>La Korona Real</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/LKR  (1).png" alt="logo do site" class="logo">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#endereço">Endereço</a></li>
+                    <li><a href="https://wa.me/5511970518462" class="btn-agendar">Agendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="servicos" id="servicos">
+        <h2>Com o que <span>trabalhamos</span></h2>
+        <div class="cards">
+            <div class="card">
+                <img src="./img/corte.jpg" alt="Corte de cabelo">
+                <h3>Cortes</h3>
+            </div>
+            <div class="card">
+                <img src="./img/coloracao.jpg" alt="Coloração">
+                <h3>Coloração</h3>
+            </div>
+            <div class="card">
+                <img src="./img/confecçao.jpg" alt="Confecçao">
+                <h3>Confecção</h3>
+            </div>
+            <div class="card">
+                <img src="./img/aplicaçao.jpg" alt="Aplicaçao">
+                <h3>Aplicação</h3>
+            </div>
+            <div class="card">
+                <img src="./img/manutençao.jpg" alt="Manutençao">
+                <h3>Manutenção</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Pop-up (fica invisível até clicar) -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h3 id="popupTitle"></h3>
+            <p id="popupText"></p>
+        </div>
+    </div>
+    <script src="./popup.js"></script>
+    <section id="equipe">
+        <h2>Nossa <span>Equipe</span></h2>
+
+        <div class="cards-container">
+
+            <div class="card" data-nome="Cassio Bezerra"
+                data-texto="Responsável pela aplicação, coloração e cortes com foco em visagismo. Atua há 18 anos como colorimetrista, com especialização em loiros, cabelos afro, penteados para noivas, cabelos infantis, confecção de próteses femininas sob medida e reposição de fios. Além disso, domina técnicas avançadas de corte, utilizando diferentes tipos de tesouras para cada estilo, tanto feminino quanto masculino, garantindo precisão, acabamento e adaptação ao perfil do cliente."
+                data-instagram="https://www.instagram.com/cassiobsantos/">
+                <img src="./img/cassio.png" alt="Cassio Bezerra">
+                <div class="card-info">
+                    <h3>Cassio Bezerra</h3>
+                    <p>Empresário Hair Style</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Val Menezes"
+                data-texto="Responsável pela avaliação das medidas e necessidades do cliente em próteses capilares com 9 anos de experiência. Atuou como líder de manutenção e coloração por 6 anos e, atualmente, é avaliadora e especialista em próteses capilares há 2 anos, auxiliando na escolha da prótese que melhor se adapta ao perfil e à rotina diária de cada cliente. Com 12 anos de experiência como usuária de prótese, possui profundo entendimento das diferentes demandas de cada cliente."
+                data-instagram="https://www.instagram.com/valmenezes.10/">
+                <img src="./img/val.png" alt="Val Menezes">
+                <div class="card-info">
+                    <h3>Val Menezes</h3>
+                    <p>Empresária Avaliadora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pop-up da equipe -->
+    <div class="popup" id="popupEquipe">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopupEquipe">&times;</span>
+            <h3 id="popupEquipeTitle"></h3>
+            <p id="popupEquipeText"></p>
+            <a href="#" id="popupEquipeInstagram" target="_blank">Ver Instagram</a>
+        </div>
+    </div>
+    <section class="sobre-nos">
+        <h2>Sobre <span>Nós</span></h2>
+
+         <div class="sobre-item">
+            <div class="sobre-img">
+                <img src="./img/Beige Brown Aesthetic Autumn Vibe Inspiration Photo Collage (1).png" alt="nosso diferencial">
+            </div>
+            <div class="sobre-texto">
+                <h3>Nosso <span>Diferencial</span></h3>
+                <p>Somos especialistas em próteses capilares, dedicados a oferecer qualidade, conforto e atenção totalmente personalizada a cada cliente. Sabemos que a perda de cabelo pode ter diversas causas — como tratamentos oncológicos, efeitos de química, estresse pós-traumático ou fatores genéticos — e cada situação exige cuidado e sensibilidade únicos.
+                </p>
+                <p>Nosso diferencial está na avaliação minuciosa, onde entendemos a história e as necessidades de cada pessoa, garantindo soluções que respeitem o estilo de vida, a rotina diária e a autoestima do cliente. Com empatia, atenção e expertise, proporcionamos resultados que devolvem confiança, conforto e bem-estar, ajudando cada cliente a se sentir seguro e valorizado.</p>
+            </div>
+        </div>
+
+        <div class="sobre-item">
+            <div class="sobre-img">
+                <img src="./img/LKR (1) (1).png" alt="quem somos">
+            </div>
+            <div class="sobre-texto">
+                <h3>Quem <span>Somos</span></h3>
+                <p>Somos especialistas em próteses capilar, focados em qualidade e conforto para nossos clientes.
+                </p>
+                <p>Nosso salão é inspirado no glamour e na sofisticação do século XVIII, quando as perucas eram
+                    símbolos
+                    de
+                    status e poder na corte do Rei Luís XIV da França. Nessa época, aristocratas e membros da
+                    realeza
+                    usavam
+                    perucas elaboradas, muitas vezes altas e adornadas com fitas e joias, para demonstrar riqueza e
+                    elegância.
+                    Assim como eles, acreditamos que o cabelo é parte essencial da identidade e da autoestima.</p>
+            </div>
+        </div>
+
+        <!-- Bloco Rei Luís XVI -->
+        <div class="sobre-item">
+            <div class="sobre-img">
+                <img src="./img/rei luiz (2) (1).png" alt="Rei Luís XVI">
+            </div>
+            <div class="sobre-texto">
+                <h3>Rei Luís XVI <span>Símbolo Masculino</span></h3>
+                <p>O Rei Luís XVI representava o <strong>poder masculino na corte francesa</strong>. Suas
+                    perucas altas
+                    e imponentes
+                    eram símbolos de autoridade e status, mostrando ao mundo a força e a influência do rei.
+                    Inspirados
+                    nesse legado histórico,
+                    valorizamos o estilo e a personalidade masculina, oferecendo próteses capilares que
+                    transmitam
+                    confiança, imponência e elegância.</p>
+            </div>
+        </div>
+        <!-- Bloco Maria Antonieta -->
+        <div class="sobre-item reverse">
+            <div class="sobre-img">
+                <img src="./img/maria antonieta (1) (1).png" alt="Maria Antonieta">
+            </div>
+            <div class="sobre-texto">
+                <h3>Maria Antonieta <span>Símbolo Feminino</span></h3>
+                <p>Maria Antonieta se tornou um verdadeiro <strong>ícone feminino de sofisticação e
+                        criatividade</strong>. Seus penteados elaborados e extravagantes ditavam
+                    moda na
+                    aristocracia francesa e simbolizavam delicadeza, charme e elegância. Inspirados
+                    nesse
+                    espírito, oferecemos próteses capilares que valorizam a beleza feminina,
+                    permitindo que cada
+                    cliente expresse sua personalidade com confiança e estilo.</p>
+            </div>
+        </div>
+
+        <div class="sobre-item reverse">
+            <div class="sobre-img">
+                <img src="./img/Design sem nome (5) (1) (1).png" alt="Processo">
+            </div>
+            <div class="sobre-texto">
+                <h3>Nosso <span>Processo</span></h3>
+                <p>Utilizamos técnicas avançadas para garantir um resultado natural e seguro
+                    para cada cliente.
+                </p>
+                <p>No século XVIII, as perucas eram feitas de cabelos humanos ou de fios
+                    naturais,
+                    cuidadosamente tratados e moldados pelos artesãos. Inspirados nesse cuidado
+                    artesanal,
+                    utilizamos técnicas modernas de próteses capilares que garantem conforto,
+                    naturalidade e
+                    durabilidade, criando resultados personalizados que respeitam a beleza de
+                    cada cliente.</p>
+            </div>
+        </div>
+
+        <div class="sobre-item">
+            <div class="sobre-img">
+                <img src="./img/peruqueiros (1) (1).png" alt="Atendimento">
+            </div>
+            <div class="sobre-texto">
+                <h3>Atendimento <span>Personalizado</span></h3>
+                <p>Cuidamos de cada detalhe, oferecendo atenção individual e suporte
+                    completo durante todo o
+                    processo.</p>
+                <p>Assim como os perruquiers (profissionais que confeccionavam perucas
+                    reais), oferecemos
+                    atendimento individualizado, dedicando tempo e atenção a cada detalhe.
+                    Nosso objetivo é
+                    que cada cliente se sinta exclusivo, valorizando não apenas o visual,
+                    mas também a
+                    experiência
+                    e a confiança que uma prótese capilar de qualidado proporciona.</p>
+            </div>
+        </div>
+
+        <div class="sobre-item reverse">
+            <div class="sobre-img">
+                <img src="./img/Design sem nome (6) (1) (1).png" alt="Resultados">
+            </div>
+            <div class="sobre-texto">
+                <h3>Resultados que <span>Encantam</span></h3>
+                <p>Nossos clientes saem satisfeitos com a transformação, confiança e
+                    autoestima renovadas.</p>
+                <p>No século XVIII, a moda das perucas não era apenas estética: era
+                    também social e cultural,
+                    sinalizando posição e elegância. Hoje, seguimos essa tradição de
+                    valorizar a imagem pessoal,
+                    oferecendo resultados que encantam, aumentam a autoestima e unem
+                    história, sofisticação e
+                    modernidade.</p>
+            </div>
+        </div>
+    </section>
+  <section class="faq" id="faq">
+  <h2>Perguntas <span>Frequentes</span></h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Quanto tempo dura a prótese?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>A prótese possui durabilidade limitada, variando conforme uso e cuidados diários. Com manutenção adequada, seu tempo de vida é prolongado.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Posso nadar, ir à praia, cachoeira ou fazer atividades físicas?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Sim, desde que a manutenção seja feita no prazo indicado (máx. 20 dias). Após mar ou piscina, enxágue com água doce e aplique protetor térmico para evitar ressecamento.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>Há risco de alergia?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Os materiais são hipoalergênicos. Podem ocorrer pequenas reações, sanáveis com antialérgicos ou pomadas. Em casos persistentes, procure um médico.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>A fita ou cola dá mau cheiro?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Não. O mau odor ocorre por excesso de suor ou tempo prolongado de uso, devido à oxidação e acúmulo de sujeira.</p>
+    </div>
+  </div>
+
+   <div class="faq-item">
+    <button class="faq-question">
+      <span>A prótese perde muito cabelo?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>A queda ocorre por escovação inadequada, desembaraço a seco, falta de hidratação, coceira intensa ou excesso de cola/fita.</p>
+    </div>
+  </div>
+
+   <div class="faq-item">
+    <button class="faq-question">
+      <span>A frente fica natural?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Sim. Um bom molde, corte profissional e referência do cliente garantem aparência natural.</p>
+    </div>
+  </div>
+
+   <div class="faq-item">
+    <button class="faq-question">
+      <span>Posso fazer a manutenção sozinho?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Sim. Ensinamos lavagem, hidratação, colocação da fita, aplicação da prótese e finalização.</p>
+    </div>
+  </div>
+
+   <div class="faq-item">
+    <button class="faq-question">
+      <span>Qual prótese é ideal para mim?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>O profissional indicará a peça mais adequada, considerando tipo, cor e tonalidade da lateral do cliente.</p>
+    </div>
+  </div>
+
+   <div class="faq-item">
+    <button class="faq-question">
+      <span>Qual o tipo de cabelo e base da prótese? É importada?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Cabelos de origem indiana, quimicamente tratados. Bases podem ser micropele, silicone ou lace; algumas híbridas combinam materiais.</p>
+    </div>
+  </div>
+
+   <div class="faq-item">
+    <button class="faq-question">
+      <span>E se eu não gostar do cabelo branco?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Oferecemos peças com pouca quantidade de grisalhos ou tonalização da lateral conforme a preferência do cliente.</p>
+    </div>
+  </div>
+</section>
+
+<script src="faq.js"></script>
+
+<section class="contato" id="contato">
+  <h2>Entre em <span>Contato</span></h2>
+  <p>Fale conosco pelo WhatsApp ou acompanhe nas redes sociais.</p>
+
+  <div class="contato-botoes">
+    <a href="https://wa.me/SEUNUMERO" target="_blank" class="botao-contato">WhatsApp</a>
+    <a href="https://www.instagram.com/SEUPERFIL" target="_blank" class="botao-contato">Instagram</a>
+    <a href="https://www.facebook.com/SEUPERFIL" target="_blank" class="botao-contato">Facebook</a>
+  </div>
+</section>
+<section class="endereco" id="endereco">
+  <h2>Nosso <span>Endereço</span></h2>
+  
+  <div class="mapa-container">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.624157524369!2d-46.43758132390691!3d-23.546016661030198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6428af0954e7%3A0x15d2c8d2582aa5ab!2sRua%20Francisco%20Albani%2C%2038%20-%20Conj.%20Res.%20Jos%C3%A9%20Bonif%C3%A1cio%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008255-740!5e0!3m2!1spt-BR!2sbr!4v1760133995300!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+
+</body>
+
+</html>
